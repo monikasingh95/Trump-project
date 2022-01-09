@@ -1,5 +1,4 @@
-const tweets = [
-  {
+{
     source: "Twitter for iPhone",
     text:
       "...2nd Amendment, Strong Military, ISIS, historic VA improvement, Supreme Court Justice, Record Stock Market, lowest unemployment in 17 yrs!",
@@ -20366,4 +20365,5 @@ const tweets = [
     is_retweet: false,
     id_str: "815422340540547073"
   }
-];
+
+
