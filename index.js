@@ -21,5 +21,13 @@ const tweets = JSON.parse(body); // This will convert "body" from a string to a 
 
 //Q How many tweets are in the data set?
 
-console.log("Number of tweets in the data set are " + tweets.length);
+console.log("Number of tweets in the data set are: " + tweets.length);
 
+//Q How many of the tweets are NOT from an iPhone?
+
+
+var filteredList = tweets.filter(filterTweet => {
+        return filterTweet.source == "Twitter for iPhone";
+});
+console.log("The number of tweets that are not from an iPhone are: ")
+console.log(tweets.length - filteredList.length);
