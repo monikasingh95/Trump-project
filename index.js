@@ -19,11 +19,11 @@ const tweets = JSON.parse(body); // This will convert "body" from a string to a 
 
 /*---------------------------------QUESTIONS--------------------------*/
 
-//Q How many tweets are in the data set?
+//Q1 How many tweets are in the data set?
 
 console.log("Number of tweets in the data set are: " + tweets.length);
 
-//Q How many of the tweets are NOT from an iPhone?
+//Q2 How many of the tweets are NOT from an iPhone?
 
 
 var filteredList = tweets.filter(filterTweet => {
@@ -31,3 +31,22 @@ var filteredList = tweets.filter(filterTweet => {
 });
 console.log("The number of tweets that are not from an iPhone are: ")
 console.log(tweets.length - filteredList.length);
+
+//Q3 What tweet got the most likes?
+
+var mappingTweet =  tweets.map(favoriteTweet => {
+        return{
+                MostLike: favoriteTweet.text,
+                likes: favoriteTweet.favorite_count
+        };
+})
+
+
+var mostLikedTweets = Math.max.apply(Math, mappingTweet);
+
+// var mostLikedTweets = Math.max.apply(Math, tweets.map(function(favoriteTweet) {
+//         return favoriteTweet.favorite_count; }
+//         ))
+
+
+console.log(mostLikedTweets);
