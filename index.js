@@ -115,5 +115,12 @@ console.log("The highest amount of favorites on a retweet is: " + maxNumOfFav);
 
 //Q6 What date did Trump publish most number of tweets?
 
+let dates = tweets.map(filterDate => {
+        return filterDate.created_at;
+})
+
+console.log(dates);
+
+
 
 
