@@ -12,7 +12,7 @@ console.log(dateTime);
 
 // console.log(dateTime.getDay());
 
- const newDate = new Date('Thu Jan 29 00:00:00 +0000 2017');
+const newDate = new Date('Thu Jan 29 00:00:00 +0000 2017');
 console.log(newDate.getDate() + " okay");
 
 const birthday = new Date('August 19, 1975 23:15:30');
