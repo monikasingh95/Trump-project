@@ -57,7 +57,7 @@ For this I'll first create a number array and then I'll use Math.max.apply to fi
 
 let numberArray = [22, 34, 56, 32, 66, 78, 11, 45, 99];
 let maxNumber = Math.max.apply(Math, numberArray);
-console.log("Maximum Number is: " + maxNumber);
+//console.log("Maximum Number is: " + maxNumber);
 // This is the output: Maximum Number is: 99 (So the function is correct, and it works).
 
 /* Now I will check what's wrong with your code.
@@ -78,7 +78,7 @@ So let's apply the function now.
  */
 
 let maxLikesCount = Math.max.apply(Math, likesCountArray);
-console.log("The maximum number of likes is: " + maxLikesCount);
+//console.log("The maximum number of likes is: " + maxLikesCount);
 // This is the output: The maximum number of likes is: 605098 (So the function is correct and it works).
 
 
@@ -99,6 +99,7 @@ console.log("The tweet that got the most likes is: " + tweets[likesCountArray2.i
 
 
 //Q4 What is the highest amount of favorites he recieved?
+console.log("The highest amount of favorites is: " + maxLikesCount);
 
 //Q5 What is the highest amount of favorites recieved on a retweet?
 
