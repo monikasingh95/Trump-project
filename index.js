@@ -90,9 +90,29 @@ console.log("The index of the maximum number of likes is: " + index); //Answer: 
 let tweet = tweets[index]; // This will return the 1005th item.
 
 //Now let's print out the tweet that got the most likes.
-console.log("The tweet that got the most likes is: " + tweet.text);
+//console.log("The tweet that got the most likes is: " + tweet.text);
 
 /*---------------------------------TWO-LINE-SOLUTION--------------------------*/
 //Everything that we did above can also be done in two lines:
 let likesCountArray2 = tweets.map(t => t.favorite_count);
 console.log("The tweet that got the most likes is: " + tweets[likesCountArray2.indexOf(Math.max.apply(Math, likesCountArray2))].text);
+
+
+//Q4 What is the highest amount of favorites he recieved?
+
+//Q5 What is the highest amount of favorites recieved on a retweet?
+
+let retweets = tweets.filter(filterRetweets => {
+        return filterRetweets.is_retweet == true;
+})
+
+let maxNumOfFav = Math.max.apply(Math, retweets.map(favCount => {
+        return favCount.favorite_count;
+}))
+
+console.log("The highest amount of favorites on a retweet is: " + maxNumOfFav);
+
+//Q6 What date did Trump publish most number of tweets?
+
+
+
