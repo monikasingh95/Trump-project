@@ -30,7 +30,7 @@ for (let tweet of tweets) {
     }
 }
 
-console.log(dateJsonData);
+// console.log(dateJsonData);
 
 let maxDate;
 let maxDateCount = 0;
